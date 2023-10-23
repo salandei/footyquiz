@@ -4,7 +4,6 @@
       "answers": "20:18:12",
       "correct_answer": "20"
     },
-
     "2": {
       "question":"How many clubs are in the English  premier league?",
       "answers": "19:21:20",
@@ -22,27 +21,27 @@
     },
     "5":{
       "question":"Which country is Lionel Messi from ?",
-      "answers":"Spain : Argentina: Italy",
+      "answers":"Spain:Argentina:Italy",
       "correct_answer": "Argentina"
     },
     "6": {
-      "question":" How many UEFA men’s best player awards has Messi won?",
+      "question":"How many UEFA men’s best player awards has Messi won?",
       "answers": "2:5:6",
       "correct_answer":"2"
     },
     "7": {
-      "question":"how many counties has Messi played in?",
+      "question":"How many counties has Messi played in?",
       "answers":"4:5:6",
       "correct_answer":"4"
     },
     "8":{
-      "question":".What is the name of Germany's senior  national team coach?",
+      "question":"What is the name of Germany's senior  national team coach?",
       "answers":"Julian Nagelsmann:Joachim Low:Solomon Adei",
       "correct_answer":"Julian Nagelsmann"
     },
     "9":{
-      "question":"what is the name of the Ghana senior national team captain?",
-      "answers":"Asamoah Gyan:Andre Ayew: Wisdom Dzeagu",
+      "question":"What is the name of the Ghana senior national team captain?",
+      "answers":"Asamoah Gyan:Andre Ayew:Wisdom Dzeagu",
       "correct_answer":"Andre Ayew"
     },
     "10":{
