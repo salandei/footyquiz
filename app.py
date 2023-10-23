@@ -21,7 +21,9 @@ def db_query(query, args=()):
     cursor = get_db().execute(query, args)
     results = cursor.fetchall()
     cursor.close()
-    return (results) if results else None
+    if results:
+        return results
+    return None
 
 # execute a statement on the database
 def db_execute(query, args=()):
@@ -37,7 +39,7 @@ def add_player(player_name, score):
     })
 
 def get_leaderboard():
-    return db_query("SELECT * FROM q_and_A")
+    return db_query("SELECT * FROM q_and_a")
 
 
 # Close the database connection when the app shuts down
@@ -59,17 +61,20 @@ def index():
 @app.post("/quiz")
 def quiz():
     username = request.form['username']
-    db = get_db()
-    rows = get_leaderboard(db)
-    urls = [url for url in rows]
-    return urls
-
-    return render_template('quiz.html', username=username)
+    db_rows = get_leaderboard()
+    questions = []
+    answers = []
+    for q_and_a_item in db_rows:
+        questions.append(q_and_a_item[0])
+        answers.append(q_and_a_item[1].split(":"))
+    return render_template('quiz.html', questions=questions, answers=answers, num_of_questions=len(questions), username=username)
 
 @app.post("/score/<username>")
 def score(username):
-    answer = request.form['radio']
-    return answer
+    player_choices = []
+    for i in range(1, 11):
+        player_choices.append(request.form[str(i)])
+    return player_choices
 
 
 
