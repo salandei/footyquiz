@@ -12,19 +12,21 @@
 
     <!-- Remove this comment and replace it with your code -->
     <div id="form-container">
-      <form class="needs-validation container d-flex flex-column" method="post" action="/quiz">
-        <div class="mb-3 has-validation">
-          <div id="usernameHelp" class="form-text">Your username will be shown on the leaderboard.</div>
-          <label for="playerUsername" class="form-label">Enter Username</label>
-          <input name="username" type="text" class="form-control" id="playerUsername" aria-describedby="usernameHelp">
-          
-          <div class="invalid-feedback">
-            Username must be between 4 and 21 characters.
-          </div>
+      <form class="container d-flex flex-column" method="post" action="score/{{username}}">
+        <div class="mb-3">
+            <div>
+                <p></p>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio" value="A" required>
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Default radio
+                </label>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary">Start Quiz</button>
+        <button type="submit" class="btn btn-primary">Submit Answers</button>
       </form>
     </div>
-  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    
   </body>
 </html>

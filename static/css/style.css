@@ -13,3 +13,7 @@
         width: 80%;
     }
 }
+
+.show {
+    display: block !important;
+}
