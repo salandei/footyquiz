@@ -126,4 +126,18 @@ def score(username):
     return render_template('score.html', score=player_score, number_of_questions=len(correct_answers))
 
 
+##################
+# ADMIN FUNCTIONS
+##################
+
+@app.get("/admin/clean_db")
+def clean_table_players():
+    db_execute("DELETE FROM players")
+    query_result = db_query("SELECT * FROM players")
+    db_conn_close()
+    if query_result == None:
+        return "Database table (players) cleaned!"
+    
+
+
 
