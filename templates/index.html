@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body class=".bg-light.bg-gradient">
-    <h1 class="p-2 text-center">OSFF Football Quiz</h1>
+    <h1 class="h1 p-2 text-center">OSFF Football Quiz</h1>
 
     <!-- Remove this comment and replace it with your code -->
     <div id="form-container">
@@ -18,6 +18,11 @@
           <label for="playerUsername" class="form-label">Enter Username</label>
           <input name="username" type="text" class="form-control" id="playerUsername" aria-describedby="usernameHelp">
           
+          {% if duplicate_username %}
+          <div class="text-danger">
+            Username already exists.
+          </div>
+          {% endif %}
           <div class="invalid-feedback">
             Username must be between 4 and 21 characters.
           </div>

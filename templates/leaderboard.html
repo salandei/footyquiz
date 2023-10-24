@@ -8,19 +8,35 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body class=".bg-light.bg-gradient">
-    <h1 class="p-2 text-center">OSFF Football Quiz</h1>
+    <h1 class="h1 p-2 text-center">OSFF Football Quiz</h1>
 
-    <!-- Remove this comment and replace it with your code -->
-    <div id="form-container">
-      <form class="container d-flex flex-column" method="post" action="quiz">
-        <div class="mb-3">
-          <label for="playerUsername" class="form-label">Your Username</label>
-          <input name="username" type="text" class="form-control" id="playerUsername" aria-describedby="usernameHelp">
-          <div id="usernameHelp" class="form-text">Your username will be shown on the leaderboard.</div>
-        </div>
-        <button type="submit" class="btn btn-primary">Start Quiz</button>
-      </form>
+    <div class="container">
+      <h2 class="h2 mb-2 text-center">Leaderboard</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Player name</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in leaderboard %}
+            <tr>
+              <th scope="row">{{leaderboard.index(data) + 1}}</th>
+              <td>{{data[0]}}</td>
+              <td>{{data[1]}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="text-center">
+        <a href="/">
+          <button type="button" class="btn btn-primary">Play Again</button>
+        </a>
+      </div>
+
     </div>
-    
   </body>
 </html>

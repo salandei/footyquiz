@@ -8,13 +8,22 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body class=".bg-light.bg-gradient">
-    <h1 class="p-2 text-center">OSFF Football Quiz</h1>
+    <h1 class="h1 p-2 mb-3 text-center">OSFF Football Quiz</h1>
 
     <!-- Remove this comment and replace it with your code -->
-    <div id="form-container">
-      <h2>Your score is {{ score }}</h2>
-    </div>
-    
+    <div class="container">
+      <h2 class="h2 mb-3 text-center">Your score : {{ score }} / {{number_of_questions}}</h2>
 
+      <div class="text-center">
+        <a href="/">
+          <button type="button" class="btn btn-primary">Play Again</button>
+        </a>
+
+        <a href="/leaderboard">
+          <button type="button" class="btn btn-primary">View Leaderboard</button>
+        </a>
+      </div>
+
+    </div>
   </body>
 </html>
