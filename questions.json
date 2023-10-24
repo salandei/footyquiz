@@ -25,7 +25,7 @@
       "correct_answer": "Argentina"
     },
     "6": {
-      "question":"How many UEFA men’s best player awards has Messi won?",
+      "question":"How many UEFA men's best player awards has Messi won?",
       "answers": "2:5:6",
       "correct_answer":"2"
     },
@@ -60,19 +60,18 @@
       "correct_answer":"Ronaldo"
     },
     "13":{
-      "question":"which club does Mohammed Kudus play for?",
+      "question":"Which club does Mohammed Kudus play for?",
       "answers":"Ajax:Right to dream:West ham United",
       "correct_answer":"West ham United"
     },
     "14":{
-      "question":"which country is Jude Bellingham from?",
+      "question":"Which country is Jude Bellingham from?",
       "answers":"Spain:England:America",
       "correct_answer":"England"
     },
     "15":{
       "question":"Richest football club in the world is?",
-      "answers":"Real Madrid: Manchester City:Liverpool",
-      "correct_answer":",Manchester City"
-    }
-    
-  }
+      "answers":"Real Madrid:Manchester City:Liverpool",
+      "correct_answer":"Manchester City"
+    }    
+}
