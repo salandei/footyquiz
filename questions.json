@@ -30,7 +30,7 @@
       "correct_answer":"2"
     },
     "7": {
-      "question":"How many counties has Messi played in?",
+      "question":"How many countries has Messi played in?",
       "answers":"4:5:6",
       "correct_answer":"4"
     },
@@ -50,7 +50,7 @@
       "correct_answer":"Al-Nassr"
     },
     "11":{
-      "question":"Who is the most capped plaeyr in the world?",
+      "question":"Who is the most capped player in the world?",
       "answers":"Ramos:Ronaldo:Messi",
       "correct_answer":"Ronaldo"
     },
