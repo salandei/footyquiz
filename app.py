@@ -91,6 +91,11 @@ def index():
 @app.get("/leaderboard")
 def show_leaderboard():
     query_result = get_leaderboard()
+
+    # If no data yet
+    if query_result == None:
+        return render_template('leaderboard.html', leaderboard=0)
+    
     leaderboard = []
     for row in query_result:
         player_name = row[0]

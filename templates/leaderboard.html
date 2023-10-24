@@ -12,6 +12,8 @@
 
     <div class="container">
       <h2 class="h2 mb-2 text-center">Leaderboard</h2>
+
+      {% if leaderboard %}
       <table class="table">
         <thead>
           <tr>
@@ -36,6 +38,13 @@
           <button type="button" class="btn btn-primary">Play Again</button>
         </a>
       </div>
+
+      {% else %}
+        <h3 class="h3">No players data!</h3>
+        <a href="/">
+          <button type="button" class="btn btn-primary">Play Quiz</button>
+        </a>
+      {% endif %}
 
     </div>
   </body>
