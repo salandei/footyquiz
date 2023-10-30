@@ -8,6 +8,11 @@ function removeErrorError(){
     errorDiv.classList.remove('show');
 }
 
+function validateUsername(username){
+    validator = /^[a-z0-9]{5,20}$/;
+    return validator.test(username);
+}
+
 (function () {
     'use strict'
 
@@ -15,7 +20,7 @@ function removeErrorError(){
   
     form.addEventListener('submit', function (event) {
         let username = document.getElementById('playerUsername').value;
-        if (username.length < 5 || username.length > 20) {
+        if (!validateUsername(username)) {
             showError();
             event.preventDefault();
             event.stopPropagation();
